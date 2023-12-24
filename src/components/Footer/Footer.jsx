@@ -31,9 +31,9 @@ const ResponsiveFooter = () => {
 
           {/* Bottom Card (Half Height) */}
             <div className="bg-black opacity-70 md:col-span-2 rounded-md  overflow-hidden p-5 md:h-40">
-          <Link to='/' key={'hom'}>
+          <Link to='/' key={'home'}>
               {/* Logo */}
-              <img src="/src/assets/logo.jpg" alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
+              <img src="/src/assets/ngc_logo.jpg" alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
           </Link>
             </div>
 
