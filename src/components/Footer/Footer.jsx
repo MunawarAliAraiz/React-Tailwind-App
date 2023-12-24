@@ -33,7 +33,7 @@ const ResponsiveFooter = () => {
             <div className="bg-black opacity-70 md:col-span-2 rounded-md  overflow-hidden p-5 md:h-40">
           <Link to='/' key={'hom'}>
               {/* Logo */}
-              <img src="/src/assets/logo.png" alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
+              <img src="/src/assets/logo.jpg" alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
           </Link>
             </div>
 
