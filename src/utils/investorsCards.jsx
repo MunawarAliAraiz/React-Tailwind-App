@@ -1,3 +1,5 @@
+import profitLogo from '../assets/icons/profit.png'
+
 const investorsCards = [
     {
         title: "Angel investors",
@@ -5,7 +7,7 @@ const investorsCards = [
     },
     {
         title: "Venture Capitalists ",
-        logoUrl: "https://i.ibb.co/4ZqZ0qZ/uk.png",
+        logoUrl: profitLogo,
     },
     {
         title: "usiness investors ",
@@ -13,7 +15,7 @@ const investorsCards = [
     },
     {
         title: "PE firms",
-        logoUrl: "../src/assets/icons/profit.png",
+        logoUrl: profitLogo,
     },
   ];
 
