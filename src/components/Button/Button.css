@@ -1,0 +1,8 @@
+.text-white {
+    color: var(--primary-text-color);
+  }
+  
+.bg-black {
+    background-color: var(--primary-bg-color);
+}
+  
