@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import logo from '../../assets/ngc_logo.jpg'
 
 const ResponsiveFooter = () => {
   return (
@@ -33,7 +34,7 @@ const ResponsiveFooter = () => {
             <div className="bg-black opacity-70 md:col-span-2 rounded-md  overflow-hidden p-5 md:h-40">
           <Link to='/' key={'home'}>
               {/* Logo */}
-              <img src="/src/assets/ngc_logo.jpg" alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
+              <img src={logo} alt="Logo" className="w-36 md:w-48 md:h-30 mx-auto rounded-lg" />
           </Link>
             </div>
 

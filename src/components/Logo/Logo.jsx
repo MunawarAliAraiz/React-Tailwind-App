@@ -1,10 +1,9 @@
 import React from 'react';
 
-const CustomLogo = ({ isVisibleOnMd, url}) => {
-  const logoClasses = `w-40 h-40 bg-cover bg-no-repeat ${
-    isVisibleOnMd ? 'mx-3' : ''
-  }`;
+const CustomLogo = ({url}) => {
+  const logoClasses = `w-36 md:w-48 md:h-30 mx-auto rounded-lg bg-cover bg-no-repeat`;
   const logoUrl = url?`url(${url})`:`url(./src/assets/logo.png)`; 
+  console.log(logoUrl);
   return (
     <span
       className={logoClasses}
