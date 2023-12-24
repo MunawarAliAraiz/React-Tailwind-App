@@ -13,10 +13,8 @@ const investorsCards = [
     },
     {
         title: "PE firms",
-        logoUrl: "./src/assets/icons/profit.png",
+        logoUrl: "../src/assets/icons/profit.png",
     },
   ];
-
-
 
   export default investorsCards;

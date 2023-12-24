@@ -19,6 +19,7 @@ import {
   Bars2Icon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import logo from '../../assets/ngc_logo.jpg'
  
 
 // nav list menu
@@ -143,7 +144,7 @@ export default function Navigationbar() {
       <div className="bg-black rounded-md">
             {/* Logo */}
             <Link to="/" key={'home'}>
-            <img src="/src/assets/ngc_logo.jpg" alt="Logo" className="w-28 md:w-48 md:h-30 mx-auto rounded-lg" />
+            <img src={logo} alt="Logo" className="w-28 md:w-48 md:h-30 mx-auto rounded-lg" />
             </Link>
           </div>
         <div className="hidden lg:block">
