@@ -1,9 +1,17 @@
 import profitLogo from '../assets/icons/profit.png'
+import investmentLogo from '../assets/icons/investment.png'
+import growthLogo from '../assets/icons/growth.png'
+import marketingLogo from '../assets/icons/marketing.png'
+import salesLogo from '../assets/icons/sale.png'
+import taxLogo from '../assets/icons/tax.png'
+import valueLogo from '../assets/icons/value.png'
+import wealthLogo from '../assets/icons/wealth.png'
+import planningLogo from '../assets/icons/planning.png'
 
 const investorsCards = [
     {
         title: "Angel investors",
-        logoUrl: "https://i.ibb.co/4ZqZ0qZ/uk.png",
+        logoUrl: investmentLogo,
     },
     {
         title: "Venture Capitalists ",
@@ -11,11 +19,11 @@ const investorsCards = [
     },
     {
         title: "usiness investors ",
-        logoUrl: "https://i.ibb.co/4ZqZ0qZ/uk.png",
+        logoUrl: wealthLogo,
     },
     {
         title: "PE firms",
-        logoUrl: profitLogo,
+        logoUrl: planningLogo,
     },
   ];
 

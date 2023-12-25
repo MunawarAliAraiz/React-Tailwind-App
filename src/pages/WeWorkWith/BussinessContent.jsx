@@ -54,7 +54,7 @@ const BussinessContent = () => {
           <div className="container flex lg:flex-row flex-col p-2 my-4 -mr-10 justify-evenly">
             {reqCards.map((card, index) => (
               <div key={index}>
-                <ReqCard {...card} />
+                <LogoCard {...card} />
               </div>
             ))}
           </div>

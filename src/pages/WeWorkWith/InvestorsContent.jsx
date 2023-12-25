@@ -1,8 +1,7 @@
 import React from "react";
 import HorizontalLine from "../../components/Horizontal Line/Hr";
-import ReqCard from "../../components/Card/RequirementCard";
-import reqCards from "../../utils/reqCards";
 import LogoCard from "../../components/Card/LogoCard";
+import reqCards from "../../utils/reqCards";
 import investorsCards from "../../utils/investorsCards";
 
 const InvestorsContent = () => {
@@ -52,7 +51,7 @@ const InvestorsContent = () => {
           <div className="container flex lg:flex-row flex-col p-2 my-4 -mr-10 justify-evenly">
             {reqCards.map((card, index) => (
               <div key={index}>
-                <ReqCard {...card} />
+                <LogoCard {...card} />
               </div>
             ))}
           </div>

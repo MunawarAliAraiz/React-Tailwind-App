@@ -1,13 +1,16 @@
 import React from 'react';
+import { CarouselDefault } from '../Carousel/Carousel';
+import cards from '../../utils/homeCards';
+import HorizontalLine from '../Horizontal Line/Hr';
 
 const Header = () => {
   return (
-    <div className="h-3/4">
+    <div className="h-2/4 h">
       {/* Full-width container */}
-      <div className="container mx-auto p-4 m-4">
+      <div className="w-screen my-4">
 
         {/* Responsive Card */}
-        <div className="max-w-screen-xl mx-auto bg-black/70 rounded-3xl shadow-lg shadow-white/20 overflow-hidden flex flex-col md:flex-row">
+        <div className="px-3 bg-black/70 rounded-xl shadow-lg shadow-white/20 flex flex-col md:flex-row">
 
           {/* Text Column */}
           <div className="lg:text-left sm:text-center lg:w-1/2 lg:p-16 p-10">
@@ -20,9 +23,12 @@ const Header = () => {
 
           {/* Image Column */}
           <div className="lg:w-1/2">
+            <CarouselDefault/>
+            {/* <CardSlider cards={cards} cardsToShow={1}/> */}
             {/* Image (Top) */}
-            <img className="w-full h-full object-cover" src="https://placekitten.com/800/600" alt="Card Image" />
+            {/* <img className="w-full h-full object-cover" src="https://placekitten.com/800/600" alt="Card Image" /> */}
           </div>
+          <HorizontalLine/>
 
         </div>
       </div>

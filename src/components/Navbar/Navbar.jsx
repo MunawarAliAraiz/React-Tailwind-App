@@ -14,7 +14,6 @@ import {
   CubeTransparentIcon,
   UserCircleIcon,
   CodeBracketSquareIcon,
-  Square3Stack3DIcon,
   ChevronDownIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
@@ -40,7 +39,7 @@ function NavListMenu({ closeNav}) {
   const renderItems = navListMenuItems.map(({ title, link }) => (
     <Link to={link} key={title}>
       <MenuItem onClick={closeNav}>
-        <Typography variant="h6" className="mb-1 text-gray-500 lg:text-gray-900 hover:text-black">
+        <Typography variant="h6" className="mb-1 text-gray-400 lg:text-gray-300 hover:text-black">
           {title}
         </Typography>
       </MenuItem>
@@ -53,9 +52,8 @@ function NavListMenu({ closeNav}) {
       {/* Desktop Menu */}
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography href="/weworkwith/bussiness-owner" variant="h4" className="font-normal">
-            <MenuItem className="hidden items-center gap-2 border-none font-medium lg:flex lg:rounded-md hover:text-black">
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
+          <Typography href="/weworkwith/bussiness-owner" variant="h4" className="font-normal" onClick={closeNav}>
+            <MenuItem className="hidden items-center gap-2 border-none text-xl font-medium lg:flex lg:rounded-md hover:text-black">
               {" We Work With "}
               <ChevronDownIcon
                 strokeWidth={2}
@@ -66,7 +64,7 @@ function NavListMenu({ closeNav}) {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden overflow-visible lg:grid" onClick={closeNav}>
+        <MenuList className="bg-black border-none hidden overflow-visible lg:grid" onClick={closeNav}>
           <ul className="flex w-full flex-col">
             {renderItems}
           </ul>
@@ -74,8 +72,7 @@ function NavListMenu({ closeNav}) {
       </Menu>
 
       {/* Mobile Menu */}
-      <MenuItem className="hover:text-black flex items-center gap-2 font-medium text-white-900 lg:hidden" onClick={closeNav}>
-        <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-white-500 text-lg" />
+      <MenuItem open={isMenuOpen} handler={setIsMenuOpen} className="hover:text-black flex items-center gap-2 text-lg lg:text-xl font-medium text-white-900 lg:hidden" onClick={closeNav}>
         {" We Work With "}
       </MenuItem>
       <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
@@ -89,17 +86,14 @@ function NavListMenu({ closeNav}) {
 const navListItems = [
   {
     label: "Home",
-    icon: UserCircleIcon,
     link: "/",
   },
   {
     label: "About Us",
-    icon: CodeBracketSquareIcon,
     link: "/about",
   },
   {
     label: "News",
-    icon: CubeTransparentIcon,
     link: "/news",
   },
 ];
@@ -107,8 +101,49 @@ const navListItems = [
 function NavList({ closeNav}) {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+
+      {/* Item 1 */}
+      <Link to='/' key='home'>
+        <Typography
+          key='Home'
+          to='/'
+          className="font-medium text-lg lg:text-xl text-white"
+        >
+          <MenuItem className="flex items-center gap-2 lg:rounded-md" onClick={closeNav}>
+            <span>Home</span>
+          </MenuItem>
+        </Typography>
+        </Link>
+
+      {/* Item 2 */}
       <NavListMenu closeNav={closeNav} />
-      {navListItems.map(({ label, icon, link }, key) => (
+
+      {/* Item 3 */}
+      <Link to='/about' key="About Us">
+        <Typography
+          key="About Us"
+          to='/about'
+          className="font-medium text-lg lg:text-xl text-white"
+        >
+          <MenuItem className="flex items-center gap-2 lg:rounded-md" onClick={closeNav}>
+            <span>About Us</span>
+          </MenuItem>
+        </Typography>
+        </Link>
+
+        {/* Item 4 */}
+      <Link to='/news' key='news'>
+        <Typography
+          key='news'
+          to='/news'
+          className="font-medium text-lg lg:text-xl text-white"
+        >
+          <MenuItem className="flex items-center gap-2 lg:rounded-md" onClick={closeNav}>
+            <span> News</span>
+          </MenuItem>
+        </Typography>
+        </Link>
+      {/* {navListItems.map(({ label, link }) => (
         <Link to={link} key={label}>
         <Typography
           key={label}
@@ -116,12 +151,11 @@ function NavList({ closeNav}) {
           className="font-medium text-xl text-white"
         >
           <MenuItem className="flex items-center gap-2 lg:rounded-md" onClick={closeNav}>
-            {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
             <span> {label}</span>
           </MenuItem>
         </Typography>
         </Link>
-      ))}
+      ))} */}
     </ul>
   );
 }
@@ -145,14 +179,14 @@ export default function Navigationbar() {
   }, []);
  
   return (
-    <Navbar className="container mx-auto bg-black shadow-sm shadow-blue-gray-200 w-full border-none p-2 lg:rounded-md lg:pl-10">
-      <div className="relative flex items-center justify-around text-white-gray-900">
-      <div className="bg-black rounded-md">
+    <Navbar fullWidth={true} className="bg-black shadow-sm shadow-blue-gray-200 border-none p-2 lg:rounded-md lg:pl-10">
+      <div className="flex items-center justify-around text-white-gray-900">
+        <div className="bg-black rounded-md">
             {/* Logo */}
             <Link to="/" key={'home'}>
             <img src={logo} alt="Logo" className="w-28 md:w-48 md:h-30 mx-auto rounded-lg" />
             </Link>
-          </div>
+        </div>
         <div className="hidden lg:block">
           <NavList  />
         </div>
