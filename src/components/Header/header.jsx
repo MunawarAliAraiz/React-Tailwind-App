@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="h-2/4 h">
       {/* Full-width container */}
-      <div className="w-screen my-4">
+      <div className="my-4">
 
         {/* Responsive Card */}
         <div className="px-3 bg-black/70 rounded-xl shadow-lg shadow-white/20 flex flex-col md:flex-row">
@@ -24,13 +24,11 @@ const Header = () => {
           {/* Image Column */}
           <div className="lg:w-1/2">
             <CarouselDefault/>
-            {/* <CardSlider cards={cards} cardsToShow={1}/> */}
-            {/* Image (Top) */}
-            {/* <img className="w-full h-full object-cover" src="https://placekitten.com/800/600" alt="Card Image" /> */}
           </div>
           <HorizontalLine/>
 
         </div>
+
       </div>
     </div>
   );

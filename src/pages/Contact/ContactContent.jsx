@@ -1,7 +1,7 @@
 import React from "react";
 import HorizontalLine from "../../components/Horizontal Line/Hr";
 import ContactForm from "./ContactForm";
-import ContactDetails from "./ContactDetails";
+import CalendlyWidget from "./CalendlyWidget";
 
 const ContactContent = () => {
   return (
@@ -39,7 +39,7 @@ const ContactContent = () => {
           <HorizontalLine />
 
           <div className="flex justify-center max-w-screen-xl my-8 mx-auto bg-black/70 rounded-3xl shadow-lg shadow-white/20 overflow-hidden">
-            <ContactDetails />
+            <CalendlyWidget />
           </div>
           <HorizontalLine />
 

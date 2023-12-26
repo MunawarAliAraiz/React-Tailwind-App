@@ -1,4 +1,5 @@
 import Header from "./components/Header/header";
+import NewsLetter from "./components/Footer/NewsLetter";
 import Footer from "./components/Footer/Footer";
 import Navigationbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/Home/Home";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/weworkwith/bussiness-owner" element={<WeWorkWithPage/>} />
         <Route path="/weworkwith/investors" element={<WeWorkWithPage investors={true}/>} />
       </Routes>
+      <NewsLetter />
       <Footer />
     </Router>
   );

@@ -18,7 +18,7 @@ const investorsCards = [
         logoUrl: profitLogo,
     },
     {
-        title: "usiness investors ",
+        title: "Business investors ",
         logoUrl: wealthLogo,
     },
     {

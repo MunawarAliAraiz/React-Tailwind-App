@@ -11,7 +11,7 @@ import planningLogo from '../assets/icons/planning.png'
 
 const reqCards = [
     {
-        title: "Located in UK, EU, VS",
+        title: "Located in UK, EU, US",
         logoUrl: valueLogo,
     },
     {
